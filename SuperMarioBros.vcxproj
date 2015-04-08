@@ -80,11 +80,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="SuperMarioBros.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bart-sdl-engine-h15\src\Core\Core.vcxproj">
       <Project>{cacb57eb-0de4-4e3f-b855-1cebd28a0c4f}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SuperMarioBros.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
