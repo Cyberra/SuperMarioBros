@@ -2,11 +2,8 @@
 #include "Sprite.h"
 #include "SuperMarioBros.h"
 
-typedef int* pInt;
-
 int main(int argc, char* args[])
 {
-
 	Engine::GetInstance()->Init();
 
 	SuperMarioBros* superMarioBros = new SuperMarioBros();
