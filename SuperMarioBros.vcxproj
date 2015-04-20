@@ -82,6 +82,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Background.cpp" />
     <ClCompile Include="Blocks.cpp" />
     <ClCompile Include="BrickBlock.cpp" />
     <ClCompile Include="Goomba.cpp" />
@@ -93,13 +94,16 @@
     <ClCompile Include="SuperMarioBros.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Background.h" />
     <ClInclude Include="Blocks.h" />
     <ClInclude Include="BrickBlock.h" />
     <ClInclude Include="Goomba.h" />
     <ClInclude Include="ItemBlock.h" />
     <ClInclude Include="Koopa.h" />
     <ClInclude Include="Level1n1.h" />
+    <ClInclude Include="Libraries.h" />
     <ClInclude Include="Mario.h" />
+    <ClInclude Include="RessourceID.h" />
     <ClInclude Include="SuperMarioBros.h" />
   </ItemGroup>
   <ItemGroup>

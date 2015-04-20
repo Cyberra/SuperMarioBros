@@ -2,7 +2,6 @@
 
 
 Blocks::Blocks()
-	: Sprite("MapStuff.png")
 {
 
 }
