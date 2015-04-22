@@ -2,11 +2,14 @@
 #include "SuperMarioBros.h"
 #include "Mario.h"
 #include "Level1n1.h"
+#include "Background.h"
 
 SuperMarioBros::SuperMarioBros()
 {
-	Mario* mario = new Mario();
+	// Plus profond a plus pres
+	Background* bkg = new Background();
 	Level1n1* level1n1 = new Level1n1();
+	Mario* mario = new Mario();
 }
 
 SuperMarioBros::~SuperMarioBros()

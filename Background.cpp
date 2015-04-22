@@ -2,17 +2,48 @@
 #include "Background.h"
 
 Background::Background()
-	: Sprite(Texture::ID::Level1n1, SKY_SRC(), FRAME_SIZE())
 {
+	const int HEIGHT = 16;
+	const int WIDTH = 16;
 	
+	int map[WIDTH][HEIGHT] = {
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	};
+	
+	for (int i = 0; i < WIDTH; ++i)
+	{
+		for (int j = 0; j < HEIGHT; ++j)
+		{
+			Sprite* temp = nullptr;
+			switch (map[j][i])
+			{
+			case 0:
+				temp = new Sprite(Texture::ID::Level1n1, SKY_SRC(), FRAME_SIZE());
+				temp->SetPosition(i * FRAME_SIZE().x, j * FRAME_SIZE().y);
+				break;
+			default:
+				break;
+			}
+		}
+	}
 }
 
 Background::~Background()
 {
 
-}
-
-void Background::Start()
-{
-	
 }

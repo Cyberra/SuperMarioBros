@@ -140,6 +140,12 @@ void Mario::Update()
 		this->Flip(SDL_FLIP_NONE);
 	}
 
+	if (Engine::GetInstance()->GetInput()->IsKeyReleased(SDL_SCANCODE_D))
+	{
+		changeState(IDLE_SMALL);
+	}
+
+
 	// S
 	if (Engine::GetInstance()->GetInput()->IsKeyPressed(SDL_SCANCODE_S))
 	{
@@ -151,6 +157,10 @@ void Mario::Update()
 	{
 		changeState(WALK_SMALL);
 		this->Flip(SDL_FLIP_HORIZONTAL);
+	}
+	if (Engine::GetInstance()->GetInput()->IsKeyReleased(SDL_SCANCODE_A))
+	{
+		changeState(IDLE_SMALL);
 	}
 
 	// F

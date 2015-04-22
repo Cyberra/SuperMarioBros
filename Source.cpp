@@ -21,7 +21,7 @@ int main(int argc, char* args[])
 
 	Engine::GetInstance()->Run();
 
-	delete superMarioBros;
-
+	//delete superMarioBros;
+	
 	return 0;
 }

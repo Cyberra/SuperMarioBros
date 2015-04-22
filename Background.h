@@ -3,18 +3,16 @@
 #include "Common.h"
 #include "Level1n1.h"
 #include "Libraries.h"
+#include "Component.h"
 
-class Background :
-	public Sprite
+class Background
 {
 public:
 	Background();
 	~Background();
 
-	void Start();
-
 private:
 	const point<int> FRAME_SIZE() { return{ 16, 16 }; };
-	const point<int> SKY_SRC() { return{ 158, 224 }; };
+	const point<int> SKY_SRC() { return{ 93, 36 }; };
 };
 
