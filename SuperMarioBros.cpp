@@ -3,11 +3,13 @@
 #include "Mario.h"
 #include "Level1n1.h"
 #include "Background.h"
+#include "BackgroundAssets.h"
 
 SuperMarioBros::SuperMarioBros()
 {
 	// Plus profond a plus pres
 	Background* bkg = new Background();
+	BackgroundAssets* bkgA = new BackgroundAssets();
 	Level1n1* level1n1 = new Level1n1();
 	Mario* mario = new Mario();
 }

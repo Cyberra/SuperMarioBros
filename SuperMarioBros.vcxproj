@@ -83,6 +83,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Background.cpp" />
+    <ClCompile Include="BackgroundAssets.cpp" />
     <ClCompile Include="Blocks.cpp" />
     <ClCompile Include="BrickBlock.cpp" />
     <ClCompile Include="Goomba.cpp" />
@@ -95,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Background.h" />
+    <ClInclude Include="BackgroundAssets.h" />
     <ClInclude Include="Blocks.h" />
     <ClInclude Include="BrickBlock.h" />
     <ClInclude Include="Goomba.h" />

@@ -1,9 +1,7 @@
 #pragma once
 
 #include "Common.h"
-#include "Level1n1.h"
 #include "Libraries.h"
-#include "Component.h"
 
 class Background
 {
