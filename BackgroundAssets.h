@@ -21,5 +21,8 @@ private:
 	const point<int> MOUNTAINTOP() { return{ 36, 162 }; };
 	const point<int> MOUNTAINDOTS1() { return{ 36, 180 }; };
 	const point<int> MOUNTAINDOTS2() { return{ 73, 180 }; };
+	const point<int> BUSHLEFT() { return{ 0, 180 }; };
+	const point<int> BUSHRIGHT() { return{ 18, 180 }; };
+	const point<int> BUSHCENTER() { return{ 0, 198 }; };
 };
 

@@ -20,7 +20,7 @@ BackgroundAssets::BackgroundAssets()
 		0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
 		0 , 0 , 5 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
 		0 , 6 , 9 , 7 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
-		6 , 9 , 8 , 10, 7 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
+		6 , 9 , 8 , 10, 7 , 0 , 0 , 0 , 0 , 0 , 0 , 11, 12, 13, 0 , 0 ,
 		0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
 		0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
 		0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
@@ -73,6 +73,18 @@ BackgroundAssets::BackgroundAssets()
 				break;
 			case 10:
 				temp = new Sprite(Texture::ID::Level1n1, MOUNTAINDOTS2(), FRAME_SIZE());
+				temp->SetPosition(i * FRAME_SIZE().x, j * FRAME_SIZE().y);
+				break;
+			case 11:
+				temp = new Sprite(Texture::ID::Level1n1, BUSHLEFT(), FRAME_SIZE());
+				temp->SetPosition(i * FRAME_SIZE().x, j * FRAME_SIZE().y);
+				break;
+			case 12:
+				temp = new Sprite(Texture::ID::Level1n1, BUSHCENTER(), FRAME_SIZE());
+				temp->SetPosition(i * FRAME_SIZE().x, j * FRAME_SIZE().y);
+				break;
+			case 13:
+				temp = new Sprite(Texture::ID::Level1n1, BUSHRIGHT(), FRAME_SIZE());
 				temp->SetPosition(i * FRAME_SIZE().x, j * FRAME_SIZE().y);
 				break;
 			default:

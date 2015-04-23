@@ -90,6 +90,7 @@
     <ClCompile Include="ItemBlock.cpp" />
     <ClCompile Include="Koopa.cpp" />
     <ClCompile Include="Level1n1.cpp" />
+    <ClCompile Include="LevelAssets.cpp" />
     <ClCompile Include="Mario.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="SuperMarioBros.cpp" />
@@ -103,6 +104,7 @@
     <ClInclude Include="ItemBlock.h" />
     <ClInclude Include="Koopa.h" />
     <ClInclude Include="Level1n1.h" />
+    <ClInclude Include="LevelAssets.h" />
     <ClInclude Include="Libraries.h" />
     <ClInclude Include="Mario.h" />
     <ClInclude Include="RessourceID.h" />

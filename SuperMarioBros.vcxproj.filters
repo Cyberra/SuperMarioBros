@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\LevelStuff">
+      <UniqueIdentifier>{5a282c5e-49f6-4930-8638-2ac17ad6b85b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\BlocksStuff">
+      <UniqueIdentifier>{24c6a5e7-d558-4f31-af12-300b1f84dba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\LevelStuff">
+      <UniqueIdentifier>{ccc062d9-74c5-414d-b2f1-1b63b69f91a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\BlocksStuff">
+      <UniqueIdentifier>{f3f3c62f-ed59-42b4-bbb3-63025fc4b10b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -30,23 +42,26 @@
     <ClCompile Include="Koopa.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Level1n1.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Blocks.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="ItemBlock.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="BrickBlock.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Background.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\LevelStuff</Filter>
     </ClCompile>
     <ClCompile Include="BackgroundAssets.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\LevelStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="Level1n1.cpp">
+      <Filter>Fichiers sources\LevelStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelAssets.cpp">
+      <Filter>Fichiers sources\LevelStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="Blocks.cpp">
+      <Filter>Fichiers sources\BlocksStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="BrickBlock.cpp">
+      <Filter>Fichiers sources\BlocksStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemBlock.cpp">
+      <Filter>Fichiers sources\BlocksStuff</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -62,18 +77,6 @@
     <ClInclude Include="Koopa.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Level1n1.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Blocks.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="ItemBlock.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="BrickBlock.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="RessourceID.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -81,10 +84,25 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Background.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\LevelStuff</Filter>
     </ClInclude>
     <ClInclude Include="BackgroundAssets.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\LevelStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelAssets.h">
+      <Filter>Fichiers d%27en-tête\LevelStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Level1n1.h">
+      <Filter>Fichiers d%27en-tête\LevelStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Blocks.h">
+      <Filter>Fichiers d%27en-tête\BlocksStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="BrickBlock.h">
+      <Filter>Fichiers d%27en-tête\BlocksStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemBlock.h">
+      <Filter>Fichiers d%27en-tête\BlocksStuff</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

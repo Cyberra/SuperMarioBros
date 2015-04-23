@@ -6,8 +6,8 @@
 
 #include "Common.h"
 #include "Animation.h"
-#include "SuperMarioBros.h"
 #include "Libraries.h"
+#include "Level1n1.h"
 
 class Mario :
 	public Animation
@@ -15,11 +15,29 @@ class Mario :
 {
 public:
 	Mario();
+	Mario(int x, int y);
 	~Mario();
 
 	void Update();
 
 private:
+
+	//////////////////////////////////////////////////////
+	// MARIO'S STATS
+	//////////////////////////////////////////////////////
+
+	float marioX;
+	float marioY;
+	float currentTime;
+
+	bool contactXLeft = false;
+	bool contactXRight = false;
+	bool contactYTop = false;
+	bool contactYBottom = false;
+	
+	float FALLSPEED = 0;
+	
+	const float RUNSPEED = 100;
 
 	//States used to determine which animation will take place 
 	enum state { IDLE_SMALL, IDLE_BIG, IDLE_FLOWER, WALK_SMALL, WALK_BIG, WALK_FLOWER, JUMP_SMALL, JUMP_BIG, JUMP_FLOWER, CROUCH_BIG, CROUCH_FLOWER, BRAKE_SMALL, BRAKE_BIG, BRAKE_FLOWER, ATTACK_FLOWER, DEATH };
@@ -54,5 +72,9 @@ private:
 	const point<int> BRAKE_FLOWER_START_SRC() { return{ 120, 70 }; };
 	const point<int> ATTACK_FLOWER_START_SRC() { return{ 0, 109 }; };
 	const point<int> DEATH_START_SRC() { return{ 180, 0 }; };
+
+
+
+	
 };
 

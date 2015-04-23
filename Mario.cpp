@@ -4,11 +4,24 @@
 Mario::Mario()
 	: Animation(Texture::ID::Mario, IDLE_NB_FRAME(), ANIM_DEFAULT_SPEED, IDLE_SMALL_START_SRC(), FRAME_SIZE())
 	, currentState(IDLE_SMALL)
+	, marioX(0)
+	, marioY(0)
+	, currentTime(0)
 {
 	//Start the animation on creation
 	this->Play();
 	//Make it loop
 	this->SetIsLooping(true);
+}
+
+Mario::Mario(int x, int y)
+	: Animation(Texture::ID::Mario, IDLE_NB_FRAME(), ANIM_DEFAULT_SPEED, IDLE_SMALL_START_SRC(), FRAME_SIZE())
+	, currentState(IDLE_SMALL)
+	, marioX(x)
+	, marioY(y)
+	, currentTime(0)
+{
+	this->SetPosition(x, y);
 }
 
 Mario::~Mario()
@@ -116,30 +129,36 @@ void Mario::changeState(state newState)
 
 void Mario::Update()
 {
+	float delta = Engine::GetInstance()->GetTimer()->GetDeltaTime();
+
+
+	std::cout << "Mario's X: " << marioX << std::endl;
+	std::cout << "Mario's Y: " << marioY << std::endl;
+
+	if (marioY < 250)
+	{
+		FALLSPEED++;
+	}
+
+	marioY += FALLSPEED * delta;
+	SetPosition((int)marioX, (int)marioY);
+
 	//Very important, otherwise our animation won't update itself
 	Animation::Update();
 
-	//Don't mind the brackets. Simply tried to save some screen space.
-	//Press Space to Pause & Resume
-
-	if (Engine::GetInstance()->GetInput()->IsKeyPressed(SDL_SCANCODE_ESCAPE))
-	{
-		if (this->GetIsPlaying()){
-			this->Stop();
-		}
-		else 
-		{
-			this->Play();
-		}
-	}
-
 	// D
-	if (Engine::GetInstance()->GetInput()->IsKeyPressed(SDL_SCANCODE_D))
+	if (Engine::GetInstance()->GetInput()->IsKeyHeld(SDL_SCANCODE_D) && !Engine::GetInstance()->GetInput()->IsKeyHeld(SDL_SCANCODE_A))
 	{
 		changeState(WALK_SMALL);
 		this->Flip(SDL_FLIP_NONE);
+		marioX += RUNSPEED * delta;
+		SetPosition((int)marioX, (int)marioY);
 	}
-
+	else if (!Engine::GetInstance()->GetInput()->IsKeyHeld(SDL_SCANCODE_D) && !Engine::GetInstance()->GetInput()->IsKeyHeld(SDL_SCANCODE_A))
+	{
+		changeState(IDLE_SMALL);
+		this->Flip(SDL_FLIP_NONE);
+	}
 	if (Engine::GetInstance()->GetInput()->IsKeyReleased(SDL_SCANCODE_D))
 	{
 		changeState(IDLE_SMALL);
@@ -153,9 +172,16 @@ void Mario::Update()
 	}
 
 	// A
-	if (Engine::GetInstance()->GetInput()->IsKeyPressed(SDL_SCANCODE_A))
+	if (Engine::GetInstance()->GetInput()->IsKeyHeld(SDL_SCANCODE_A) && !Engine::GetInstance()->GetInput()->IsKeyHeld(SDL_SCANCODE_D))
 	{
 		changeState(WALK_SMALL);
+		this->Flip(SDL_FLIP_HORIZONTAL);
+		marioX -= RUNSPEED * delta;
+		SetPosition((int)marioX, (int)marioY);
+	}
+	else if (!Engine::GetInstance()->GetInput()->IsKeyHeld(SDL_SCANCODE_A) && !Engine::GetInstance()->GetInput()->IsKeyHeld(SDL_SCANCODE_D))
+	{
+		changeState(IDLE_SMALL);
 		this->Flip(SDL_FLIP_HORIZONTAL);
 	}
 	if (Engine::GetInstance()->GetInput()->IsKeyReleased(SDL_SCANCODE_A))
@@ -174,4 +200,21 @@ void Mario::Update()
 	{
 		changeState(JUMP_SMALL);
 	}
+	
+	// Bottom Collision
+	//for (i = 0; i < blockID; ++i)
+	//{
+	//
+	//}
+	//if (marioX + 15 && marioY + 31)
+	//{
+	//	FALLSPEED = 0;
+	//}
+
+
+
+
+
+
+
 }

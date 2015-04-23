@@ -1,5 +1,7 @@
-#include "Blocks.h"
 
+#include "Blocks.h"
+#include "BrickBlock.h"
+#include "ItemBlock.h"
 
 Blocks::Blocks()
 {

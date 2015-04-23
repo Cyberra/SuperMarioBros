@@ -1,10 +1,17 @@
 #pragma once
-#include "D:\ProgEngine\bart-sdl-engine-h15\src\Core\Sprite.h"
+
+#include "Common.h"
+#include "Animation.h"
+#include "Libraries.h"
+
 class Blocks :
-	public Sprite
+	public Animation
 {
 public:
 	Blocks();
 	~Blocks();
+
+private:
+	
 };
 
