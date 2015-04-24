@@ -7,10 +7,9 @@
 #include "Common.h"
 #include "Animation.h"
 #include "Libraries.h"
-#include "Level1n1.h"
 
-class Mario :
-	public Animation
+class Mario 
+	: public Animation
 
 {
 public:
@@ -19,6 +18,7 @@ public:
 	~Mario();
 
 	void Update();
+	float GetMarioX() { return marioX; }
 
 private:
 
@@ -29,15 +29,9 @@ private:
 	float marioX;
 	float marioY;
 	float currentTime;
-
-	bool contactXLeft = false;
-	bool contactXRight = false;
-	bool contactYTop = false;
-	bool contactYBottom = false;
-	
 	float FALLSPEED = 0;
-	
 	const float RUNSPEED = 100;
+
 
 	//States used to determine which animation will take place 
 	enum state { IDLE_SMALL, IDLE_BIG, IDLE_FLOWER, WALK_SMALL, WALK_BIG, WALK_FLOWER, JUMP_SMALL, JUMP_BIG, JUMP_FLOWER, CROUCH_BIG, CROUCH_FLOWER, BRAKE_SMALL, BRAKE_BIG, BRAKE_FLOWER, ATTACK_FLOWER, DEATH };

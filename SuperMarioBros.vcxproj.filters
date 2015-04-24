@@ -25,6 +25,12 @@
     <Filter Include="Fichiers sources\BlocksStuff">
       <UniqueIdentifier>{f3f3c62f-ed59-42b4-bbb3-63025fc4b10b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Enemies">
+      <UniqueIdentifier>{9a0aeecc-2dfb-4b99-b1e4-57d1ba84588d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Enemies">
+      <UniqueIdentifier>{d6ffbec0-e78e-4c81-8f6c-3235632e2785}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -36,19 +42,10 @@
     <ClCompile Include="Mario.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Goomba.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Koopa.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Background.cpp">
       <Filter>Fichiers sources\LevelStuff</Filter>
     </ClCompile>
     <ClCompile Include="BackgroundAssets.cpp">
-      <Filter>Fichiers sources\LevelStuff</Filter>
-    </ClCompile>
-    <ClCompile Include="Level1n1.cpp">
       <Filter>Fichiers sources\LevelStuff</Filter>
     </ClCompile>
     <ClCompile Include="LevelAssets.cpp">
@@ -63,18 +60,30 @@
     <ClCompile Include="ItemBlock.cpp">
       <Filter>Fichiers sources\BlocksStuff</Filter>
     </ClCompile>
+    <ClCompile Include="Enemies.cpp">
+      <Filter>Fichiers sources\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Goomba.cpp">
+      <Filter>Fichiers sources\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Koopa.cpp">
+      <Filter>Fichiers sources\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Levels.cpp">
+      <Filter>Fichiers sources\LevelStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="l1n1.cpp">
+      <Filter>Fichiers sources\LevelStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SuperMarioBros.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Mario.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Goomba.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Koopa.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="RessourceID.h">
@@ -92,9 +101,6 @@
     <ClInclude Include="LevelAssets.h">
       <Filter>Fichiers d%27en-tête\LevelStuff</Filter>
     </ClInclude>
-    <ClInclude Include="Level1n1.h">
-      <Filter>Fichiers d%27en-tête\LevelStuff</Filter>
-    </ClInclude>
     <ClInclude Include="Blocks.h">
       <Filter>Fichiers d%27en-tête\BlocksStuff</Filter>
     </ClInclude>
@@ -103,6 +109,24 @@
     </ClInclude>
     <ClInclude Include="ItemBlock.h">
       <Filter>Fichiers d%27en-tête\BlocksStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemies.h">
+      <Filter>Fichiers d%27en-tête\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Goomba.h">
+      <Filter>Fichiers d%27en-tête\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Koopa.h">
+      <Filter>Fichiers d%27en-tête\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Levels.h">
+      <Filter>Fichiers d%27en-tête\LevelStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="l1n1.h">
+      <Filter>Fichiers d%27en-tête\LevelStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,10 +2,10 @@
 
 #include "Common.h"
 #include "Libraries.h"
-#include "Animation.h"
+#include "Blocks.h"
 
 class ItemBlock :
-	public Animation
+	public Blocks
 {
 public:
 	ItemBlock();

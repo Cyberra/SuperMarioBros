@@ -5,7 +5,7 @@
 #include "Libraries.h"
 
 class Blocks :
-	public Animation
+	public virtual Animation
 {
 public:
 	Blocks();

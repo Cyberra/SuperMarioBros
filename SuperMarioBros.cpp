@@ -1,10 +1,6 @@
 
 #include "SuperMarioBros.h"
-#include "Mario.h"
-#include "Level1n1.h"
-#include "Background.h"
-#include "BackgroundAssets.h"
-#include "LevelAssets.h"
+
 
 SuperMarioBros::SuperMarioBros()
 {
@@ -12,7 +8,7 @@ SuperMarioBros::SuperMarioBros()
 	Background* bkg = new Background();
 	BackgroundAssets* bkgA = new BackgroundAssets();
 	LevelAssets* bkgLA = new LevelAssets();
-	Level1n1* level1n1 = new Level1n1();
+	l1n1* myLevel = new l1n1();
 	Mario* mario = new Mario();
 }
 

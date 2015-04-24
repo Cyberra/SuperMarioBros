@@ -1,9 +1,6 @@
 #pragma once
 
-#include "Common.h"
-#include "Animation.h"
-#include "Libraries.h"
-#include "Rectangle.h"
+#include "l1n1.h"
 
 class LevelAssets
 	: public Animation
@@ -15,7 +12,7 @@ public:
 	void Update();
 
 
-	Rectangle blockID[1000] {};
+	// Rectangle blockID[1000] {};
 
 private:
 	

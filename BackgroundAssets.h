@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Common.h"
-#include "Libraries.h"
+#include "l1n1.h"
 
 class BackgroundAssets
+	: public Animation
 {
 public:
 	BackgroundAssets();

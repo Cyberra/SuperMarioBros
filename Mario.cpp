@@ -134,11 +134,13 @@ void Mario::Update()
 
 	std::cout << "Mario's X: " << marioX << std::endl;
 	std::cout << "Mario's Y: " << marioY << std::endl;
-
+	
+	/*
 	if (marioY < 250)
 	{
 		FALLSPEED++;
 	}
+	*/
 
 	marioY += FALLSPEED * delta;
 	SetPosition((int)marioX, (int)marioY);
@@ -206,15 +208,6 @@ void Mario::Update()
 	//{
 	//
 	//}
-	//if (marioX + 15 && marioY + 31)
-	//{
-	//	FALLSPEED = 0;
-	//}
-
-
-
-
-
 
 
 }

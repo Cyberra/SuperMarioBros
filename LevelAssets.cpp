@@ -44,7 +44,7 @@ LevelAssets::LevelAssets()
 			case 1:
 				temp = new Sprite(Texture::ID::Level1n1, GROUND(), FRAME_SIZE());
 				temp->SetPosition(i * FRAME_SIZE().x, j * FRAME_SIZE().y);
-				// blockID.push_back(temp);
+				
 				break;
 			default:
 				break;
